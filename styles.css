@@ -1,0 +1,143 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #0C0D12;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#opt-obb{
+    zoom: 2;
+}
+
+#opt-version{
+    zoom: 1.5;
+}
+
+#photopea-resultado{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.debug{
+    display: none;
+}
+#photopea{
+    border:none;
+    flex: 1;
+    display: none;
+    width: 50%;
+    height: 350px;
+}
+#preview-image{
+    flex:1;
+    display: none;
+    width: 50%;
+}
+.title-main{
+    font-weight: 900;
+    font-size: 45px;
+    text-align: center;
+}
+.form-options{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.option{
+    margin: 5px;
+    padding: 10px;
+    background-color: #04070D;
+    border-color:#121316;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 9px;
+    padding-bottom: 20px;
+    flex: auto; 
+}
+.option:focus-within{
+    border-color: #232325;
+}
+.option.optionabove{
+    margin: 5px;
+    padding: 10px;
+}
+.option.optionabove > input{
+    margin-left: 20px;
+}
+#btn-submit{
+    color: white;
+    width: 100%;
+    margin: 5px;
+    height: 40px;
+    background-color:#1d4fe6;
+    font-weight: 600;
+    font-size: 20px;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 2px;
+    cursor:pointer;
+}
+#btn-submit:disabled{
+    background-color:#3856b1;
+    opacity: 0.4;
+    cursor:default;
+}
+#savepreview{
+    float: right;
+    color: white;
+    margin: 5px;
+    height: 20px;
+    background-color:#e62a1d;
+    font-weight: 600;
+    font-size: 15px;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 4px;
+    cursor:pointer;
+}
+#savepreview:disabled{
+    background-color: #e62a1d;
+    opacity: 0.4;
+    cursor: default;
+}
+.opt-title{
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+    
+}
+.opt-content{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image-options{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+.opt-link{
+    display: none;
+}
+
+@media (max-width: 900px){
+    body{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+@media (max-width: 750px){
+    body{
+        margin: 0px;
+    }
+    #photopea-resultado{
+        flex-direction: column;
+    }
+    #photopea-resultado > *{
+        width: 100%;
+    }
+}

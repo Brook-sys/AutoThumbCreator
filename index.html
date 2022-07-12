@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>AutoThumbCreator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <script language="javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>  
+  </head>  
+  <body>
+    <h1 class="title-main">AUTO THUMB CREATOR</h1>
+    <div class="form-options">
+      <div class="option">
+        <label class="opt-title">OBB</label>
+        <div class="opt-content">
+          <input id="opt-obb"  type="checkbox" name="opt-obb"/>
+        </div>
+        
+        
+      </div>
+      <div class="option">
+        <label class="opt-title">VERSION</label>
+        <div class="opt-content">
+          <input id="opt-version"  type="text" name="opt-version"/>
+        </div>
+        
+      </div>
+      <div class="option">
+        <label class="opt-title">IMAGEM DE FUNDO</label>
+        <div class="opt-content">
+          <div class="image-options">
+            <input class="opt-local" type="radio" name="opt-back" onchange="optchanged(this)" value="local" checked>Arquivo Local</input>
+            <input class="opt-local" type="radio" name="opt-back" onchange="optchanged(this)" value="online">Online</input>
+          </div>
+          <input id="opt-backimage" type="file" name="opt-backimage" accept="image/*" draggable="true" />
+          <input id="opt-backimagelink" class="opt-link" type="text" name="opt-iconimagelink" placeholder="Link" value=""/>
+        </div>
+        
+        
+      </div>
+      <div class="option">
+        <label class="opt-title">ICONE DO APP/GAME</label>
+        <div class="opt-content">
+          <div class="image-options">
+            <input class="opt-local" type="radio" name="opt-icon" onchange="optchanged(this)" value="local" checked>Arquivo Local</input>
+            <input class="opt-local" type="radio" name="opt-icon" onchange="optchanged(this)" value="online">Online</input>
+          </div>
+          <input id="opt-iconimage" type="file" name="opt-iconimage" accept="image/*" draggable="true" />
+          <input id="opt-iconimagelink" class="opt-link" type="text" name="opt-iconimagelink" placeholder="Link" value=""/>
+        </div>
+      </div>
+      <button id="btn-submit" onclick="create()" disabled>CREATE</button>
+      <div class="option optionabove">
+        <input class="debug"type="checkbox" name="showphotopea" id="showphotopea" onchange="optchanged(this)">
+        <label class="debug" for="showphotopea">Mostrar Photopea</label>
+        <input type="checkbox" name="showresult" id="showresult" onchange="optchanged(this)">
+        <label for="showresult">Mostrar resultado</label>
+        <input type="checkbox" name="autosaveresult" id="autosaveresult" onchange="optchanged(this)">
+        <label for="autosaveresult">Salvar Resultado Automaticamente</label>
+        <button id="savepreview" disabled>DOWNLOAD</button>
+      </div>
+    </div>
+    <div id="photopea-resultado">
+      <iframe id="photopea" src="https://www.photopea.com" onload="iframeLoaded(this)" ></iframe>
+      <img id="preview-image">
+    </div>
+  </body>
+</html>
